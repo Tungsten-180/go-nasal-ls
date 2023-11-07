@@ -5,5 +5,7 @@ import (
 )
 
 func main() {
-	astparser.GetAST("/home/tungsten/Documents/flight/B-1B/Nasal/pylons.nas")
+	ast := astparser.GetAST("/home/tungsten/Documents/flight/B-1B/Nasal/oso_management.nas")
+	astparser.Run(ast)
+	ast.DumpCalls()
 }
